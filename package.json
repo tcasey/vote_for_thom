@@ -1,0 +1,65 @@
+{
+  "name": "vote_for_thom",
+  "description": "Gatsby and Netlify CMS",
+  "version": "1.0.0",
+  "author": "tcasey",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "emotion": "^9.2.3",
+    "emotion-server": "^9.2.3",
+    "gatsby": "^1.9.63",
+    "gatsby-image": "^1.0.54",
+    "gatsby-link": "^1.6.21",
+    "gatsby-plugin-emotion": "^1.1.17",
+    "gatsby-plugin-favicon": "^2.1.1",
+    "gatsby-plugin-google-fonts": "^0.0.4",
+    "gatsby-plugin-netlify-cms": "^1.0.6",
+    "gatsby-plugin-react-helmet": "^1.0.5",
+    "gatsby-plugin-sass": "^1.0.12",
+    "gatsby-plugin-sharp": "^1.6.18",
+    "gatsby-remark-images": "^1.5.18",
+    "gatsby-source-filesystem": "^1.5.5",
+    "gatsby-transformer-remark": "^1.7.17",
+    "gatsby-transformer-sharp": "^1.6.13",
+    "lodash.get": "^4.4.2",
+    "react-load-script": "0.0.6",
+    "react-media": "^1.6.1",
+    "react-router-dom": "^4.2.2",
+    "react-scrollchor": "^5.0.2",
+    "react-svg": "^2.2.9"
+  },
+  "keywords": [
+    "gatsby",
+    "netlify",
+    "cms",
+    "javascript",
+    "react",
+    "graphql"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "build:lambda": "node_modules/.bin/netlify-lambda build src/lambdas/",
+    "start": "gatsby develop",
+    "start:lambda": "node_modules/.bin/netlify-lambda serve src/lambdas/",
+    "serve": "gatsby serve",
+    "_format": "prettier --trailing-comma es5 --no-semi --single-quote --write",
+    "format": "npm run format:src & npm run format:cms",
+    "format:src": "npm run _format 'src/**/*.js'",
+    "format:cms": "npm run _format 'cms/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "netlify-lambda": "^0.2.0",
+    "prettier": "^1.7.4"
+  },
+  "proxy": {
+    "/.netlify/functions": {
+      "target": "http://localhost:9000",
+      "pathRewrite": {
+        "^/\\.netlify/functions": ""
+      }
+    }
+  }
+}

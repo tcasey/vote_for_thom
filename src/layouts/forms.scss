@@ -1,0 +1,85 @@
+@import "./colors.sass";
+@import "./fonts.sass";
+@import "./variables.sass";
+
+fieldset {
+  position: relative;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.button-reset::-moz-focus-inner,
+.input-reset::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.input-cta-form {
+  border: none; /* <-- This thing here */
+  border-radius: 4px 0 0 4px;
+  margin-right: 2px;
+}
+
+input,
+textarea {
+  background-color: $grey-1;
+  border-radius: 8;
+  border: 0;
+  padding: 12px 16px 10px;
+  font-size: $font-medium;
+  line-height: 1.25;
+  position: relative;
+  transition: 0.5s;
+  z-index: 2;
+  &:focus {
+    background-color: $grey-1;
+  }
+  &:focus + label {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-120%);
+  }
+}
+
+::-webkit-input-placeholder {
+  color: $grey-3;
+  font-size: 1rem;
+  line-height: normal;
+}
+
+:-moz-placeholder {
+  color: $grey-3;
+  font-size: 1rem;
+  line-height: normal;
+}
+
+::-moz-placeholder {
+  color: $grey-3;
+  font-size: 1rem;
+  line-height: normal;
+}
+
+:-ms-input-placeholder {
+  color: $grey-3;
+  font-size: 1rem;
+  line-height: normal;
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: $grey-1;
+  background-color: $primary;
+  border-radius: 8;
+  padding: 2 4;
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  opacity: 0;
+  line-height: 1;
+  transition: 0.5s;
+  z-index: 2;
+}

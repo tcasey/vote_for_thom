@@ -1,0 +1,127 @@
+@import "./svg.scss"
+@import "./menu.sass"
+@import "./footer.sass"
+@import "./colors.sass"
+@import "./forms.scss"
+@import "./fonts.sass"
+@import "./variables.sass"
+
+$card_break: 730px
+$examples_break: 800px
+
+#___gatsby
+  overflow: hidden
+  width: 100vw
+
+*
+  margin: 0
+  padding: 0
+
+body
+  font-family: lato,helvetica neue,roboto,noto,segoe ui,arial,sans-serif
+  font-size: 18px
+  font-size: 1rem
+  line-height: 1.5
+  font-weight: 400
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+html
+  background-color: #f3f3f3
+  font-size: 18px
+
+.fx-space-around
+  display: flex
+  justify-content: space-around
+.fx-center
+  display: flex
+  justify-content: center
+.fx-center-vert
+  display: flex
+  align-items: center
+.column
+  display: flex
+  flex-direction: column
+.row
+  display: flex
+  flex-direction: row
+.text-center
+  text-align: center
+.measure-normal
+  width: 100%
+  max-width: 40em
+.measure-narrow
+  width: 100%
+  max-width: 25em
+.measure-extra-narrow
+  max-width: 20em
+.card
+  max-width: 40em
+  display: flex
+  flex-direction: column
+  @media (min-width: $card_break)
+    flex-direction: row
+
+.reverse
+  display: flex
+  flex-direction: column
+  @media (min-width: $card_break)
+    flex-direction: row-reverse
+    .card-img
+      border-radius: 5px 5px
+    .card-text
+      border-radius: 5px 5px
+
+.card-img
+  border-radius: 5px 5px
+  @media (min-width: $card_break)
+    border-radius: 5px 5px
+
+.card-text
+  display: flex
+  flex-direction: column
+  justify-content: center
+  width: 354px
+  border-radius: 5px 5px
+  @media (min-width: $card_break)
+      width: 9em
+      border-radius: 5px 5px
+
+
+.padding-horizontal
+  padding: 0 20px 0 20px
+.pb
+  padding-bottom: 20px
+.pb2
+  padding-bottom: 40px
+.pb4
+  padding-bottom: 80px
+.pt
+  padding-top: 20px
+.pt2
+  padding-top: 40px
+.pt4
+  padding-top: 80px
+.ph2
+  padding: 0 20px 0 20px
+.ph4
+  padding: 0 40px 0 40px
+.p
+  padding: 20px
+.mb
+  margin-bottom: 20px
+.bounty-example
+  padding-right: 20px
+  max-width: 379px
+  padding-bottom: 40px
+
+.bounty-example-container
+  display: flex
+  flex-direction: column
+  @media (min-width: $examples_break)
+    flex-direction: row
+
+.bounty-example-content
+  min-height: 120px
+  border-bottom-left-radius: 4px
+  border-bottom-right-radius: 4px

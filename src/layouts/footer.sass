@@ -1,0 +1,11 @@
+@import "./colors.sass"
+
+$footer_break: 840px
+
+.footer-container
+  display: flex
+  flex-direction: row
+  @media (max-width: $footer_break)
+    align-items: center
+    flex-direction: column
+    text-align: center
